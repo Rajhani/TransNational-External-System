@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="output" format="xml">
+      <types:example format="xml" element="{http://www.example.org/Bookings/}getRoutesResponse" location="examples/Output message for TransNational - getRoutes.xml"/>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#000673d2-5c73-4725-b7aa-c3492e7405bc">
+    <types:processor-declaration>
+      <types:output-event>
+        <types:message>
+          <types:payload type="output"/>
+        </types:message>
+      </types:output-event>
+    </types:processor-declaration>
+  </types:enrichment>
+</types:mule>
